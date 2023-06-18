@@ -1,18 +1,18 @@
 <nav>
     <div class="navbar">
         <ul>
-            <li class="nav-item">
-                <a [routerLink]="['/']">HOME</a>
+            <li>
+                <a [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">HOME</a>
             </li>
-            <li class="nav-item">
-                <a [routerLink]="['/mfe1']">MFE1</a>
+            <li>
+                <a [routerLink]="['/mfe1']" [routerLinkActive]="['active']">MFE1</a>
             </li>
-            <li class="nav-item">
-                <a [routerLink]="['/mfe2']">MFE2</a>
+            <li>
+                <a [routerLink]="['/mfe2']" [routerLinkActive]="['active']">MFE2</a>
             </li>
-            <!-- <li class="nav-item ml-3">
-                    <button (click)="shareData()">Share data</button>
-                </li> -->
+            <li>
+                <button (click)="shareData()">Share data</button>
+            </li>
         </ul>
     </div>
 </nav>

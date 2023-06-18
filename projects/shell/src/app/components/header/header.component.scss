@@ -10,6 +10,10 @@
             a {
                 color: #fff;
                 text-decoration: none;
+
+                &.active {
+                    background-color: black;
+                }
             }
         }
     }

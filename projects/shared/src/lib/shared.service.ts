@@ -12,6 +12,7 @@ export class SharedService {
   updateUser(user:User):void {
     this.userInfo = {...user};
     this.userInfo$.next(this.userInfo);
+    console.log(user)
   }
   getUserInfo(): Observable<User | undefined> {
     return this.userInfo$.asObservable();
