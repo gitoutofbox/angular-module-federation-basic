@@ -40,7 +40,7 @@ module.exports = {
         // For hosts (please adjust)
         remotes: {
             "HomeModule": "http://localhost:5001/remoteEntry.js",
-            "UsersModule": "http://localhost:5002/remoteEntry.js",
+            // "UsersModule": "http://localhost:5002/remoteEntry.js",
 
         },
 

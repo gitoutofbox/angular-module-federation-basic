@@ -17,4 +17,8 @@ export class SharedService {
   getUserInfo(): Observable<User | undefined> {
     return this.userInfo$.asObservable();
   }
+
+  public get user(): string {
+    return this.userInfo?.name? this.userInfo.name : '';
+  }
 }

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -11,12 +12,13 @@ const routes: Routes = [
   },
   {
     path: 'mfe1',
-    loadChildren: () =>
-      loadRemoteModule({
-        type: 'module',
-        remoteEntry: 'http://localhost:5001/remoteEntry.js',
-        exposedModule: './HomeModule'
-      }).then(m => m.HomeModule)
+    loadChildren: () => import('HomeModule/HomeModule').then(m => m.HomeModule)
+    // loadChildren: () =>
+    //   loadRemoteModule({
+    //     type: 'module',
+    //     remoteEntry: 'http://localhost:5001/remoteEntry.js',
+    //     exposedModule: './HomeModule'
+    //   }).then(m => m.HomeModule)
   },
   {
     path: 'mfe2',
